@@ -1,24 +1,76 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_0" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Animation View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="AnimationViewController" customModule="SpringAnimation" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="H1x-p9-n07" customClass="SpringView" customModule="Spring">
+                                <rect key="frame" x="16" y="104" width="288" height="185"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="S3G-Md-SNh">
+                                        <rect key="frame" x="16" y="16" width="256" height="153"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" red="0.0017304854700341821" green="0.9276922345161438" blue="0.99680465459823608" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstItem="S3G-Md-SNh" firstAttribute="leading" secondItem="H1x-p9-n07" secondAttribute="leading" constant="16" id="EcY-2x-Eaf"/>
+                                    <constraint firstAttribute="bottom" secondItem="S3G-Md-SNh" secondAttribute="bottom" constant="16" id="UbQ-5i-ntO"/>
+                                    <constraint firstAttribute="trailing" secondItem="S3G-Md-SNh" secondAttribute="trailing" constant="16" id="WCi-Vj-SPL"/>
+                                    <constraint firstAttribute="height" constant="185" id="XIG-AO-b4J"/>
+                                    <constraint firstItem="S3G-Md-SNh" firstAttribute="top" secondItem="H1x-p9-n07" secondAttribute="top" constant="16" id="mM5-b6-qX1"/>
+                                </constraints>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZhY-2V-pfh" customClass="SpringButton" customModule="Spring">
+                                <rect key="frame" x="40" y="390" width="240" height="61"/>
+                                <color key="backgroundColor" red="0.0017304854700341821" green="0.9276922345161438" blue="0.99680465459823608" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="240" id="5kQ-Yp-3eQ"/>
+                                    <constraint firstAttribute="height" constant="61" id="VQW-bX-u7M"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <action selector="nextAnimationTapped" destination="BYZ-38-t0r" eventType="touchUpInside" id="tN8-2l-dSd"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="H1x-p9-n07" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="5VT-fP-hu9"/>
+                            <constraint firstItem="H1x-p9-n07" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="84" id="Dwl-no-yXQ"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="ZhY-2V-pfh" secondAttribute="bottom" constant="117" id="WRb-Sr-4kK"/>
+                            <constraint firstItem="ZhY-2V-pfh" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="lga-tt-cxP"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="H1x-p9-n07" secondAttribute="trailing" constant="16" id="wtI-Uh-ryn"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="animationView" destination="H1x-p9-n07" id="oJU-dl-hW4"/>
+                        <outlet property="descriptionLabel" destination="S3G-Md-SNh" id="m8o-bl-Coo"/>
+                        <outlet property="nextAnimationButton" destination="ZhY-2V-pfh" id="1BK-cY-WJb"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="131.25" y="138.38028169014083"/>
         </scene>
     </scenes>
 </document>

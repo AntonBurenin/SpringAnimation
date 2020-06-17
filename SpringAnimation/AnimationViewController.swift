@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  AnimationViewController.swift
 //  SpringAnimation
 //
 //  Created by Bober on 17/06/2020.
